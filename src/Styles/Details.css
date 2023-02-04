@@ -1,0 +1,113 @@
+.details__main{
+    min-height: calc(100vh - 70px);
+    padding: 0 calc(3.5vw + 5px);
+    position: relative;
+}
+
+.details__background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.8;
+
+}
+
+.details__background > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details__title{
+    height: 30vh;
+    min-height: 170px;
+    width: 35vw;
+    min-width: 200px;
+    margin-top: 60px;
+    
+}
+.details__title > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.details__controls{
+display: flex;
+}
+
+.playButton,
+.trailerButton,
+.addButton,
+.groupButton{
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 0px 24px;
+        margin-right: 22px;
+        letter-spacing: 1.8px;
+        cursor: pointer;
+        text-transform: uppercase;
+       
+}
+
+.playButton,
+.trailerButton{
+    height: 56px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.playButton{
+    background-color: rgb(249, 249, 249);
+}
+
+.trailerButton,
+.addButton,
+.groupButton{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
+}
+
+.playButton:hover,
+.trailerButton:hover,
+.addButton:hover,
+.groupButton:hover{
+    background: rgb(198, 198, 198);
+}
+
+
+.addButton,
+.groupButton {
+    width: 44px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.addButton > .icon,
+.groupButton > .icon {
+    font-size: 30px;
+}
+
+.details__sub-title{
+color: rgb(249, 249, 249);
+font-size: 15px;
+min-height: 20px;
+margin-top: 26px;
+}
+
+.details__description{
+    margin-top: 16px;
+    line-height: 1.4;
+    font-size: 20px;
+    color: rgb(249, 249, 249);
+    max-width: 760px;
+    
+}
