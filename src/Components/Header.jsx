@@ -3,7 +3,11 @@ import '../Styles/Header.css'
 import logo from '../Assets/images/logo.svg'
 import HomeIcon from '@mui/icons-material/Home';
 import pp from '../Assets/images/pp.jpeg'
-
+import SearchIcon from '@mui/icons-material/Search';
+import AddIcon from '@mui/icons-material/Add';
+import StarIcon from '@mui/icons-material/Star';
+import GroupWorkIcon from '@mui/icons-material/GroupWork';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 
 const Header = () => {
@@ -17,23 +21,23 @@ const Header = () => {
                <p>HOME</p>
                </a>
                <a className='nav__option'>
-               <HomeIcon className='nav__icon'/>
+               <SearchIcon className='nav__icon'/>
                <p>SEARCH</p>
                </a>
                <a className='nav__option'>
-               <HomeIcon className='nav__icon'/>
+               <AddIcon className='nav__icon'/>
                <p>WATCHLIST</p>
                </a>
                <a className='nav__option'>
-               <HomeIcon className='nav__icon'/>
+               <StarIcon className='nav__icon'/>
                <p>ORIGINALS</p>
                </a>
                <a className='nav__option'>
-               <HomeIcon className='nav__icon'/>
+               <GroupWorkIcon className='nav__icon'/>
                <p>MOVIES</p>
                </a>
                <a className='nav__option'>
-               <HomeIcon className='nav__icon'/>
+               <LiveTvIcon className='nav__icon'/>
                <p>SERIES</p>
                </a>
             </div>

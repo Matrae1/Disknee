@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/Movies.css'
-import bannerFive from '../Assets/images/viewers-starwars.png'
+import Media from '../UI/Media'
+import { films } from '../data'
+
 
 const Movies = () => {
+    console.log(films)
+  
     return (
         <div className='movies__main'>
             <h4>Reccommended for You</h4>
             <div className='movies'>
-                <div className='movie__content'>
-                    <img src={bannerFive} alt="" />
-                </div>
-                <div className='movie__content'>
-                    <img src={bannerFive} alt="" />
-                </div>
-                <div className='movie__content'>
-                    <img src={bannerFive} alt="" />
-                </div>
-                <div className='movie__content'>
-                    <img src={bannerFive} alt="" />
-                </div>
+                {
+                films.filter((film) => film.recommended === true).slice(0, 8)
+                .map((film) => ( 
+                <Media film={film} key={film.id}/>
+                ))}
+                
+                
             </div>
+            
         </div>
     );
 }
