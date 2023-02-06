@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import '../Styles/Movies.css'
-import Media from '../UI/Media'
+import React from 'react';
 import { films } from '../data'
+import Media from '../UI/Media';
 
-
-const Movies = () => {
-    console.log(films)
-  
+const Pixar = () => {
     return (
         <div className='movies__main'>
-            <h4>Reccommended for You</h4>
+            <h4>Pixar Films</h4>
             <div className='movies'>
                 {
-                films.filter((film) => film.recommended === true).slice(0, 8)
+                films.filter((film) => film.category === 'Pixar')
                 .map((film) => ( 
                 <Media film={film} key={film.id}/>
                 ))}
@@ -24,4 +20,4 @@ const Movies = () => {
     );
 }
 
-export default Movies;
+export default Pixar;

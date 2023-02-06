@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/Details.css'
-import bannerOne from '../Assets/images/viewers-disney.png'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import AddIcon from '@mui/icons-material/Add';
 import GroupsIcon from '@mui/icons-material/Groups';
+import { useParams } from 'react-router-dom';
+import { films } from '../data';
+import RemoveIcon from '@mui/icons-material/Remove';
 
-const Details = () => {
+const Details = ({ addToWatchlist }) => {
+    const { id } = useParams();
+    const film = films.find(film => +film.id === +id)
+    const [added, setAdded] = useState(false);
+
+    function addedToWatchlist(film) {
+        setAdded(true)
+        addToWatchlist(film)
+    }
+
+   
+
+
+   
+    
     return (
         <div className='details__main'>
             <div className="details__background">
-                <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg" alt="" />
+                <img src={film.background} alt="" />
             </div>
             <div className="details__title">
-            <img src={bannerOne} alt="" />
+            <img src={film.detailPhoto} alt="" />
             </div>
             <div className="details__controls">
                 <button className="playButton">
@@ -23,18 +39,50 @@ const Details = () => {
                 <PlayArrowIcon />
                    <span>TRAILER</span>
                 </button>
-                <button className="addButton">
-                <AddIcon className='icon'/>
-                </button>
-                <button className="groupButton">
+                {
+                    added ? ( <button className="addButton"  onClick={() => addedToWatchlist(film)}>
+                    <RemoveIcon className='icon'/>
+                    </button> ) : (
+                        <button className="addButton"  onClick={() => addedToWatchlist(film)}>
+                        <AddIcon className='icon'/>
+                        </button>
+                    )
+                }
+                <button className="groupButton" >
                 <GroupsIcon className='icon' />
                 </button>
             </div>
             <div className="details__sub-title">
-                2018 * 7m * Family * Kids * Animation
+                {film.tags}
             </div>
             <div className="details__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, suscipit aut? Impedit deserunt, aut, nihil voluptas doloribus sed cumque dicta sunt earum facilis non beatae excepturi consequatur et a unde?
+                {film.description}
+            </div>
+            <div className="film__details">
+                <h2 className='details__section'>DETAILS</h2>
+                <div className="film__info">
+                    <div className="film__description--half">
+                    <h2>{film.title}</h2>
+                    <p>{film.plot}</p>
+                    </div>
+                    <div className="film__info--content">
+                        <div className="half">
+                            <h3>Duration:</h3>
+                            <p>{film.duration}</p>
+                            <h3>Release Date:</h3>
+                            <p>{film.releaseDate}</p>
+                            <h3>Genre:</h3>
+                            <p>{film.genre}</p>
+                        </div>
+                        <div className="half__2">
+                            <h3>Director :</h3>
+                            <p>{film.director}</p>
+                            <h3>Starring :</h3>
+                            <p>{film.starring}</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     );

@@ -28,3 +28,9 @@
     height: 100%;
     object-fit: cover;
 }
+
+.bannerLink > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

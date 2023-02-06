@@ -20,11 +20,13 @@
     margin-left: 25px;
     align-items: center;
     
+    
 }
 
 .nav__option:hover > p::after{
     transform: scaleX(1);
     opacity: 1;
+ 
     
 }
 
@@ -35,12 +37,16 @@
     padding: 0 12px;
     font-size: 16px;
     cursor:pointer;
+    text-decoration: none !important;
+   
 }
 
 .nav__option > p {
     margin-left: 5px;
     letter-spacing: 1.42px;
     position: relative;
+    color: white;
+    text-decoration: none;
 }
 
 

@@ -10,7 +10,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: -10;
     opacity: 0.8;
 
 }
@@ -64,6 +64,9 @@ display: flex;
 .playButton{
     background-color: rgb(249, 249, 249);
 }
+.groupButton{
+    cursor: not-allowed;
+}
 
 .trailerButton,
 .addButton,
@@ -111,3 +114,59 @@ margin-top: 26px;
     max-width: 760px;
     
 }
+
+.details__section{
+    letter-spacing: 1.42px;
+    position: relative;
+  
+}
+
+.details__section::after{
+    content: "";
+    height: 2px;
+    background-color: rgb(173, 167, 167);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    opacity: 1;
+   
+
+}
+
+.film__info{
+    display: flex;
+}
+
+.film__description--half{
+max-width: 50%;
+margin-right: 24px;
+}
+
+
+.film__info--content{
+    display: flex;
+}
+
+.half{
+    width: 50%;
+}
+
+.half__2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media  (max-width: 1200px){
+    .film__info{
+        display: flex;
+        flex-direction: column;
+    }
+    .film__description--half{
+        max-width: 100%;
+        margin: 0;
+    }
+
+}
+    
