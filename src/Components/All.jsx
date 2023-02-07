@@ -1,6 +1,7 @@
 import React from 'react';
 import { films } from '../data'
 import Media from '../UI/Media';
+import { RemoveScrollBar } from 'react-remove-scroll-bar';
 
 const All = () => {
     return (
@@ -17,6 +18,7 @@ const All = () => {
             </div>
             
         </div>
+        
     );
 }
 

@@ -11,7 +11,7 @@
     bottom: 0;
     right: 0;
     z-index: -10;
-    opacity: 0.8;
+    opacity: 0.5;
 
 }
 
@@ -158,6 +158,11 @@ margin-right: 24px;
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 @media  (max-width: 1200px){
     .film__info{
         display: flex;
@@ -169,4 +174,6 @@ margin-right: 24px;
     }
 
 }
+
+
     

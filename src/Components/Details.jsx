@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../Styles/Details.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useParams } from "react-router-dom";
 import { films } from "../data";
-import RemoveIcon from "@mui/icons-material/Remove";
+
 
 const Details = () => {
   const { id } = useParams();
   const film = films.find((film) => +film.id === +id);
 
+ 
   return (
     <div className="details__main">
       <div className="details__background">
@@ -24,12 +25,14 @@ const Details = () => {
           <PlayArrowIcon />
           <span>PLAY</span>
         </button>
+        <a href={film.trailer} target="_blank">
         <button className="trailerButton">
           <PlayArrowIcon />
-          <span>TRAILER</span>
+          <span className="trailer">TRAILER</span>
         </button>
-        <button className="addButton">
-          <AddIcon className="icon" />
+        </a>
+        <button  className="addButton">
+          <AddIcon className="icon"/>
         </button>
         <button className="groupButton">
           <GroupsIcon className="icon" />

@@ -45,7 +45,7 @@ const Header = () => {
                <a className='nav__option'>
                <GroupWorkIcon className='nav__icon'/>
                <Link to="/all"  className='nav__option'>
-               <p>MOVIES</p>
+               <p>ALL</p>
                </Link>
                </a>
                <a className='nav__option'>

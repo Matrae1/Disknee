@@ -16,9 +16,12 @@ import Series from "./Components/Series";
 import Watchlist from "./Components/Watchlist";
 import Search from "./Components/Search";
 
+
+
 function App() {
  
   return (
+   
     <Router>
       <div className="App">
         <Header />
@@ -42,6 +45,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    
   );
 }
 
