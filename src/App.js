@@ -14,22 +14,10 @@ import All from "./Components/All";
 import Original from "./Components/Original";
 import Series from "./Components/Series";
 import Watchlist from "./Components/Watchlist";
+import Search from "./Components/Search";
 
 function App() {
-  const [watchlist, setWatchlist] = useState([]);
-
-  function addToWatchlist(film){
-    setWatchlist([...watchlist, film])
-  }
-
-  useEffect(() => {
-    console.log(watchlist)
-  }, [watchlist])
-console.log(watchlist[0].title)
-
-
  
-
   return (
     <Router>
       <div className="App">
@@ -39,7 +27,7 @@ console.log(watchlist[0].title)
           <Route path="/" element={<Home />} />
           <Route
             path="/details/:id"
-            element={<Details addToWatchlist={addToWatchlist} />}
+            element={<Details/>}
           />
           <Route path="/disney" element={<Disney />} />
           <Route path="/marvel" element={<Marvel />} />
@@ -50,6 +38,7 @@ console.log(watchlist[0].title)
           <Route path="/originals" element={<Original />} />
           <Route path="/series" element={<Series />} />
           <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </div>
     </Router>

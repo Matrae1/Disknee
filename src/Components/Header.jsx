@@ -26,7 +26,9 @@ const Header = () => {
                </a>
                <a className='nav__option'>
                <SearchIcon className='nav__icon'/>
+               <Link to="/search" className='nav__option'>
                <p>SEARCH</p>
+               </Link>
                </a>
                <a className='nav__option'>
                <AddIcon className='nav__icon'/>

@@ -289,7 +289,7 @@ export const films = [
     },
     {
         id:17 ,
-        title:"Black Panther ",
+        title:"Black Panther",
         detailPhoto:"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/37F440CD37BF728065E14ABBF0DBC44413DA68FE273D8901D20577B78094AB8B/scale?width=1440&aspectRatio=1.78&format=png",
         background:"https://gh.cdn.sewest.net/assets/ident/pulse/59756537/TRM-Outfit-BlackPanther-MCUSoloMovie-1920x1080-TG-Final-5twmvcedw.jpg?quality=65",
         image:"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E9C4697F1745DEF68CD73B638BE6FCFB72B537788FB4F252E04B7BB745EE27A9/scale?width=1200&aspectRatio=1.78&format=jpeg",
@@ -324,7 +324,7 @@ export const films = [
     },
     {
         id:19 ,
-        title:"Spider-Man: No Way Home ",
+        title:"Spider-Man: No Way Home",
         detailPhoto:"https://whatsondisneyplus.com/wp-content/uploads/2022/04/spiderman-no-way-home.jpg",
         background:"https://i.ytimg.com/vi/0aIR2oe6h-Y/maxresdefault.jpg",
         image:"https://commentaryboxsports.com/wp-content/uploads/2022/03/Is-Spider-Man-No-Way-Home-Coming-to-Disney-Plus.jpg",
