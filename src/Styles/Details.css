@@ -42,7 +42,8 @@ display: flex;
 .playButton,
 .trailerButton,
 .addButton,
-.groupButton{
+.groupButton,
+.back__button{
         display: flex;
         align-items: center;
         border: none;
@@ -64,13 +65,16 @@ display: flex;
 .playButton{
     background-color: rgb(249, 249, 249);
 }
-.groupButton{
+.groupButton,
+.playButton,
+.addButton{
     cursor: not-allowed;
 }
 
 .trailerButton,
 .addButton,
-.groupButton{
+.groupButton,
+.back__button{
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid rgb(249, 249, 249);
     color: rgb(249, 249, 249);
@@ -162,6 +166,14 @@ a {
     text-decoration: none;
 }
 
+.back__button{
+    top: 5%;
+    position: absolute;
+    height: 36px;
+}
+
+
+
 
 @media  (max-width: 1200px){
     .film__info{
@@ -173,6 +185,12 @@ a {
         margin: 0;
     }
 
+}
+
+@media (width > 768px){
+    .back__button{
+        display: none;
+    }
 }
 
 

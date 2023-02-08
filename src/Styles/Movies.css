@@ -1,5 +1,7 @@
 
-
+ .text{
+    display: flex;
+ }
 .movies{
     display: grid;
     grid-gap: 25px;
@@ -31,6 +33,22 @@
  object-fit: cover;
 }
 
+.back__button{
+    display: flex;
+        align-items: center;
+        border: none;
+        letter-spacing: 1.8px;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        right: 0;
+        
+}
+
+.back__button:hover{
+    background: rgba(198, 198, 198, 0.5);
+}
+
 @media (max-width: 768px){
     .movies{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -44,5 +62,10 @@
     }
 }
 
+@media (width > 768px){
+    .back__button{
+        display: none;
+    }
+}
 
 

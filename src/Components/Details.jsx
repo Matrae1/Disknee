@@ -3,7 +3,7 @@ import "../Styles/Details.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 import GroupsIcon from "@mui/icons-material/Groups";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { films } from "../data";
 
 
@@ -17,6 +17,9 @@ const Details = () => {
       <div className="details__background">
         <img src={film.background} alt="" />
       </div>
+      <Link to="/">
+      <button className="back__button">Back</button>
+      </Link>
       <div className="details__title">
         <img src={film.detailPhoto} alt="" />
       </div>
